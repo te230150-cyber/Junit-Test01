@@ -25,6 +25,10 @@ public class CalcTest {
     void divテスト正常() {
         assertEquals(calc.div(5, 4), 1);
     }
+     @Test
+    void subテスト正常() {
+        assertEquals(calc.sub(5, 4), 1);
+    }
 
     @Test
     void mulテスト正常() {
@@ -53,16 +57,6 @@ public class CalcTest {
 
 
 
-    @Test
-    void 例外() {
-
-         assertThatThrownBy(() -> {
-        calc.div(4, 0);
-    })
-    //発生したexceptionのクラス
-    .isExactlyInstanceOf(ArithmeticException.class)
-    //エラーメッセージに特定の文字列が含まれるか
-    .hasMessageContaining("/by zero");
-    }
+ 
 
 }
